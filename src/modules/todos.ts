@@ -43,19 +43,22 @@ const initialState: TodosState = []; //초기상태는 TodosState의 배열
 function todos(state: TodosState = initialState, action: TodosAction): TodosState{
     switch(action.type){
         case ADD_TODO:
+            //새로운 항목 등록
             return state.concat({
                 id: action.payload.id,
                 text: action.payload.text,
                 done: false
             });
         case TOGGLE_TODO:
+            //toggle
             return state.map(todo => 
                 todo.id === action.payload ? {
-                    ...todo, 
-                    done: !todo.done
+                    ...todo,
+                    done: !todo.done //done을 반전
                 } : todo
             )
         case REMOVE_TODO:
+            //todo.id와 action.payload가 일치하면 사라짐
             return state.filter(todo =>
                 todo.id !== action.payload
             )

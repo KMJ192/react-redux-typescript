@@ -18,7 +18,7 @@ function TodoItem({todo, onToggle, onRemove} : TodoItemProps) {
     const removeStyle: CSSProperties ={
         color: "red",
         marginLeft: 8
-    }
+    };
 
     return (
         <li>

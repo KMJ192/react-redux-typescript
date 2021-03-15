@@ -5,7 +5,7 @@ interface TodoInsertProps{
 }
 
 function TodoInsert({onInsert} : TodoInsertProps) {
-    //input값 관리    
+    //input값 관리
     const [value, setValue] = useState('');
     const onChange = (e : React.ChangeEvent<HTMLInputElement>) => {
         setValue(e.target.value);
@@ -28,4 +28,4 @@ function TodoInsert({onInsert} : TodoInsertProps) {
     )
 }
 
-export default TodoInsert
+export default TodoInsert;
