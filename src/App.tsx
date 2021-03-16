@@ -1,5 +1,6 @@
 import React from 'react';
 import CounterContainer from './container/CounterContainer';
+import GithubProfileLoader from './container/GithubProfileLoader';
 import TodoApp from './container/TodoApp';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div>
       <CounterContainer/>
       <TodoApp/>
+      <GithubProfileLoader/>
     </div>
   );
 }

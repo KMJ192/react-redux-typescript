@@ -1,2 +1,9 @@
 npm install redux react-redux
 npm install @types/react-redux
+
+//typesafe-actions라이브러리 사용
+npm install typesafe-actions
+
+//redux-thunk with axios
+npm install redux-thunk axios
+https://api.github.com/users/KMJ192 조회
