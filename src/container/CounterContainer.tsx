@@ -7,7 +7,7 @@ import { decrease, increase, increaseBy } from '../modules/counter';
 function CounterContainer() {
     const count = useSelector((state: RootState) => state.counter.count);
     const dispatch = useDispatch();
-
+    
     const onIncrease = () => {
         dispatch(increase());
     }
