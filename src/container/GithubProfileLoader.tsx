@@ -10,17 +10,16 @@ function GithubProfileLoader() {
     const dispatch = useDispatch();
     
     const onSubmitUsername = (username: string)=>{
-        console.log(username);
+        //console.log(username);
         //dispatch(getUserProfileThunk(username));
         dispatch(getUserProfileAsync.request(username));
-        console.log(username);
     }
 
     return (
         <>
             <GithubUsernameForm onSubmitUsername={onSubmitUsername}/>
             {loading && <p style={{ textAlign: 'center'}}>로딩중</p>}
-            {error && <p style={{ textAlign: 'center'}}>Erro발생</p>}
+            {error && <p style={{ textAlign: 'center'}}>Error발생</p>}
             {data && <GithubProfileInfo
                 bio={data.bio}
                 blog={data.blog}
