@@ -5,11 +5,11 @@ import { getUserProfileAsync } from './actions';
 export function getUserProfileThunk(username: string){
     return async(dispatch: Dispatch) => {
         const { request, success, failure } = getUserProfileAsync;
-        dispatch(request());
+        //dispatch(request());
         try{
             const userProfile = await getUserProfile(username);
             dispatch(success(userProfile));
-        }catch(e){
+        }catch(e: any){
             dispatch(failure(e));
         }
     };
