@@ -17,6 +17,7 @@ function CounterContainer(props: any) {
 
   const onDecrease = () => {
     // dispatch(decrease());
+    props.decrease();
   };
 
   const onIncreaseBy = (diff: number) => {
